@@ -5,27 +5,25 @@
     margin: 0;
     padding: 0;
 }
-
 html {
     height: 100%;
     width: 100%;
 }
-
 body {
     height: 100%;
     width: 100%;
     background-color: #e8e498;
+    background-color: white;
 }
-
 .calculator {
     background-color: #bfd8a2;
     border-bottom: 20px solid #bfd8a2;
     border-left: 15px solid #cde7b0;
     border-radius: 20px 5px 20px 5px;
     border-right: 5px solid #bfd8a2;
-    -webkit-box-shadow: 5px 0px 20px grey;
+  /*  -webkit-box-shadow: 5px 0px 20px grey;
     box-shadow: 5px 0px 20px grey;
-    font-family: 'Roboto Condensed', sans-serif;
+   */ font-family: 'Roboto Condensed', sans-serif;
     height: auto;
     margin: auto;
     margin-top: 10px;
@@ -36,14 +34,12 @@ body {
     padding-bottom: 10px;
     width: 100%;
 }
-
 .calculator-inner {
     height: 100%;
     margin: auto;
     padding: 6% 0 0 0;
     width: 90%;
 }
-
 .name {
     background-image: url('vanilla.png');
     background-position: 10px 10px;
@@ -58,7 +54,6 @@ body {
     padding: 0px;
     width: 25%;
 }
-
 .text-1 {
     color: rgb(48, 36, 23);
     display: block;
@@ -66,7 +61,6 @@ body {
     font-size: 13px;
     margin: 5px;
 }
-
 .mini-display {
     background-color: #9cb285;
     border-bottom: 5px solid #b7b271;
@@ -82,7 +76,6 @@ body {
     text-shadow: 2px 2px 3px #dbe3d2;
     width: 75%;
 }
-
 .display-box {
     background-color: #9cb285;
     border-bottom: 12px solid #b7b271;
@@ -96,7 +89,6 @@ body {
     position: relative;
     width: 100%;
 }
-
 .main-display {
     border-radius: 3px;
     color: rgb(53, 61, 55);
@@ -109,7 +101,6 @@ body {
     text-shadow: 2px 2px 3px #dbe3d2;
     width: 100%;
 }
-
 .info {
     background-color: white;
     color: rgb(48, 36, 23);
@@ -120,7 +111,6 @@ body {
     text-align: left;
     text-indent: 7px;
 }
-
 .text-2 {
     clear: both;
     float: right;
@@ -128,7 +118,6 @@ body {
     font-style: italic;
     margin: 5px;
 }
-
 .buttons-container {
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -143,72 +132,69 @@ body {
     -ms-flex-pack: distribute;
     justify-content: space-around;
     margin: auto;
-    max-width: 300px;
+    max-width: 275px;
     min-height: 301px;
     width: 100%;
+    
+    
 }
-
 .bt::after {
     border-bottom: 2px solid #2b3138;
     border-left: 2px solid #2b3138;
     border-radius: 8px 1px 8px 1px;
-    bottom: 27px;
+    bottom: 28px;
     content: '';
     display: block;
     height: inherit;
     position: relative;
-    right: 13px;
+    right: 12px;
     width: inherit;
 }
-
 .bt {
-    border-radius: 8px 1px 8px 1px;
+    border-radius: 5px 1px 8px 1px;
     border-top: 0;
     -webkit-box-shadow: 3px 0px 5px grey;
     box-shadow: 3px 0px 5px grey;
     color: #cde7b0;
     font-size: 15px;
     font-weight: bold;
-    height: 41px;
+    height: 43px;
     margin: 5px;
+    margin-left: -2px;
+    margin-top: 5px;
     padding: 10px 5px 5px 5px;
     text-indent: 5px;
-    -webkit-transition: background-color 0.3s;
-    -o-transition: background-color 0.3s;
-    transition: background-color 0.3s;
-    -webkit-transition: border-width 0.3s;
-    -o-transition: border-width 0.3s;
-    transition: border-width 0.3s;
-    -webkit-transition: -webkit-box-shadow 0.3s;
-    transition: -webkit-box-shadow 0.3s;
-    -o-transition: box-shadow 0.3s;
-    transition: box-shadow 0.3s;
-    transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+    -webkit-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    transition: background-color 0.5s;
+    -webkit-transition: border-width 0.5s;
+    -o-transition: border-width 0.5s;
+    transition: border-width 0.5s;
+    -webkit-transition: -webkit-box-shadow 0.5s;
+    transition: -webkit-box-shadow 0.5s;
+    -o-transition: box-shadow 0.5s;
+    transition: box-shadow 0.5s;
+    transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
     width: 52px;
 }
-
 .bt-help {
     text-indent: -0.02em;
 }
-
 .operations {
     background-color: #56697f;
     border-bottom: 8px solid #56697f;
     border-left: 6px solid #89a0ba;
     border-right: 6px solid #56697f;
 }
-
 .numbers {
     background-color: #685745;
     border-bottom: 8px solid #685745;
     border-left: 6px solid #826c54;
     border-right: 6px solid #685745;
 }
-
 .bt::-moz-focus-inner {
     border: 0;
 }
-
 .operations:focus,
 .operations:hover {
     background-color: #465362;
@@ -217,7 +203,6 @@ body {
     border-right: 6px solid #465362;
     outline: none;
 }
-
 .numbers:focus,
 .numbers:hover {
     background-color: #493c2e;
@@ -226,66 +211,80 @@ body {
     border-right: 6px solid #493c2e;
     outline: none;
 }
-
 .bt:active {
     border-radius: 0;
     border: 0;
-    height: 35px;
-    margin-right: 5px;
     margin-top: 7px;
     width: 49px;
+    height: 36px;
+    margin-right: 8px;
+    margin-top: 10px;
+    width: 49px;
 }
-
 .bt:active::after {
     width: inherit;
     height: inherit;
     border-radius: 3px;
     border: 2px solid black;
+    color: blue;
     bottom: 29px;
     right: 7px;
 }
-
+.bt-active {
+    border-radius: 0;
+    border: 0;
+    margin-top: 7px;
+    width: 49px;
+    height: 36px;
+    margin-right: 8px;
+    margin-top: 10px;
+    width: 49px;
+}
+.bt-active::after {
+    width: inherit;
+    height: inherit;
+    border-radius: 3px;
+    border: 2px solid black;
+    color: blue;
+    bottom: 29px;
+    right: 7px;
+}
 #mc,
 #ac,
 #clear,
 #back {
     color: red;
 }
-
+/*
 #back {
     font-size: 25px;
     line-height: 10px;
 }
-
 #back::after {
     bottom: 20px;
 }
-
 #back:active::after {
     bottom: 22px;
 }
-
+*/
 .info-E {
     bottom: 0;
     font-size: 13px;
     padding-left: 3px;
     position: absolute;
 }
-
 .info-M {
     font-size: 13px;
     padding-left: 3px;
     position: absolute;
     top: 0;
 }
-
 @media all and (min-width: 320px) {
     .mini-display {
         height: 45px;
         font-size: 13px;
     }
 }
-
 @media all and (min-width: 350px) {
     .display {
         letter-spacing: 5px;
@@ -294,14 +293,14 @@ body {
         letter-spacing: 0px;
     }
 }
-
 @media all and (min-width: 430px) {
-    .bt:active {
+  /*  .bt:active {
         height: 35px;
         margin-right: 8px;
         margin-top: 10px;
         width: 49px;
     }
+    */
     .calculator {
         margin-top: 20px;
     }
@@ -325,7 +324,6 @@ body {
         margin: 5% auto;
     }
 }
-
 @media all and (min-width: 1440px) {
     .calculator {
         margin-top: 60px;
