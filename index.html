@@ -4,12 +4,12 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vanilla JavaScript Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vanilla JavaScript Calculator</title>
 
-  <link rel="stylesheet" href="style.css">
-  <!--
+    <link rel="stylesheet" href="style.css">
+    <!--
   <script type="text/javascript" src="lib/jasmine-3.6.0/jasmine.js"></script>
   <script type="text/javascript" src="lib/jasmine-3.6.0/jasmine-html.js"></script>
   <script type="text/javascript" src="lib/jasmine-3.6.0/boot.js"></script>
@@ -17,94 +17,58 @@
 </head>
 
 <body>
-  <a style="display:block;color:black;padding:2em;" href="SpecRunner.html">Tests</a>
-  <div id="calculator-id" class="calculator">
-    <div class="calculator-inner">
-      <h1 class="name">JS</h1>
-      <div id="mini-display-id" class="mini-display"></div>
-      <p class="text-1">BROWSER POWER</p>
-      <div class="display-box">
-        <div id="main-display-id" class="main-display"></div>
-        <div id="info-M-id" class="info-M">M</div>
-        <div id="info-E-id" class="info-E">E</div>
-      </div>
-      <p class="text-2">8 DIGITS</p>
-      <div class="buttons-container">
-        <button id="clear" class="bt operations" type="button" data-description="Clears main screen."
-          data-key-code="KeyC" data-operation="clear">C</button>
-        <button id="mc" class="bt operations" type="button" data-description="Clears memory."
-          data-key-code="ControlRight" data-operation="clearMemory">MC</button>
-        <button id="ac" class="bt operations" type="button" data-description="Clears everything." data-key-code="Delete"
-          data-operation="clearAll">AC</button>
-        <button id="help" class="bt operations bt-help" type="button"
-          data-description="Changes calculator to help mode. Press buttons to display information." data-key-code="KeyH"
-          data-operation="toggleHelpMode">Help</button>
+    <a style="display:block;color:black;padding:2em;" href="SpecRunner.html">Run tests</a>
+    <div id="calculator-id" class="calculator">
+        <div class="calculator-inner">
+            <h1 class="name">JS</h1>
+            <div id="mini-display-id" class="mini-display"></div>
+            <p class="text-1">BROWSER POWER</p>
+            <div class="display-box">
+                <div id="main-display-id" class="main-display"></div>
+                <div id="info-M-id" class="info-M">M</div>
+                <div id="info-E-id" class="info-E">E</div>
+            </div>
+            <p class="text-2">8 DIGITS</p>
+            <div class="buttons-container">
+                <button id="clear" class="bt operations" type="button" data-description="Clears main screen." data-key-code="KeyC" data-operation="clear">C</button>
+                <button id="mc" class="bt operations" type="button" data-description="Clears memory." data-key-code="ControlRight" data-operation="clearMemory">MC</button>
+                <button id="ac" class="bt operations" type="button" data-description="Clears everything." data-key-code="Delete" data-operation="clearAll">AC</button>
+                <button id="help" class="bt operations bt-help" type="button" data-description="Changes calculator to help mode. Press buttons to display information." data-key-code="KeyH" data-operation="toggleHelpMode">Help</button>
 
-        <button id="mr" class="bt operations" type="button" data-description="Recalls number from memory."
-          data-key-code="ArrowUp" data-operation="recallMemory">MR</button>
-        <button id="ms" class="bt operations" type="button" data-description="Saves number to memory."
-          data-key-code="ArrowDown" data-operation="saveToMemory">MS</button>
-        <button id="mminus" class="bt operations" type="button"
-          data-description="Substracts number from a number in memory and saves result to memory."
-          data-key-code="ArrowLeft" data-operation="minusFromMemory">M&#8722;</button>
-        <button id="mplus" class="bt operations" type="button"
-          data-description="Adds number to a number in memory and saves result to memory." data-key-code="ArrowRight"
-          data-operation="addToMemory">M&#43;</button>
+                <button id="mr" class="bt operations" type="button" data-description="Recalls number from memory." data-key-code="ArrowUp" data-operation="recallMemory">MR</button>
+                <button id="ms" class="bt operations" type="button" data-description="Saves number to memory." data-key-code="ArrowDown" data-operation="saveToMemory">MS</button>
+                <button id="mminus" class="bt operations" type="button" data-description="Substracts number from a number in memory and saves result to memory." data-key-code="ArrowLeft" data-operation="minusFromMemory">M&#8722;</button>
+                <button id="mplus" class="bt operations" type="button" data-description="Adds number to a number in memory and saves result to memory." data-key-code="ArrowRight" data-operation="addToMemory">M&#43;</button>
 
-        <button id="back" class="bt operations backspace" type="button"
-          data-description="Deletes last entered digit if no operation was performed on a number."
-          data-key-code="Backspace" data-operation="deleteLastEntry">&#8592;</button>
-        <button id="posneg" class="bt operations" type="button"
-          data-description="Changes number sign (negative/positive)." data-key-code="Backslash"
-          data-operation="changeSign">&#43;&#47;&#8722;
+                <button id="back" class="bt operations backspace" type="button" data-description="Deletes last entered digit if no operation was performed on a number." data-key-code="Backspace" data-operation="deleteLastEntry">&#8592;</button>
+                <button id="posneg" class="bt operations" type="button" data-description="Changes number sign (negative/positive)." data-key-code="Backslash" data-operation="changeSign">&#43;&#47;&#8722;
         </button>
-        <button id=" percent" class="bt operations" type="button"
-          data-description="Enter first number, then operation, then second number folowed by &#37;. Second number will become percentage of first number. 90 &#43; 10&#37; = 99"
-          data-key-code="KeyP" data-operation="percentageOfNumber1">&#37;</button>
-        <button id="sroot" class="bt operations" type="button" data-description="Calculates square root."
-          data-key-code="KeyR" data-operation="squareRoot">&#8730;</button>
+                <button id=" percent" class="bt operations" type="button" data-description="Enter first number, then operation, then second number folowed by &#37;. Second number will become percentage of first number. 90 &#43; 10&#37; = 99" data-key-code="KeyP" data-operation="percentageOfNumber1">&#37;</button>
+                <button id="sroot" class="bt operations" type="button" data-description="Calculates square root." data-key-code="KeyR" data-operation="squareRoot">&#8730;</button>
 
-        <button id="seven" class="bt numbers" type="button" data-description="Enters 7" data-operation="writeNumber"
-          data-key-code="Numpad7">7</button>
-        <button id="eight" class="bt numbers" type="button" data-description="Enters 8" data-operation="writeNumber"
-          data-key-code="Numpad8">8</button>
-        <button id="nine" class="bt numbers" type="button" data-description="Enters 9" data-operation="writeNumber"
-          data-key-code="Numpad9">9</button>
-        <button id="divide" class="bt operations" type="button" data-description="Enters divide operation."
-          data-key-code="NumpadDivide" data-operation="prepCalculation" data-calc-function="divide">&#247;</button>
+                <button id="seven" class="bt numbers" type="button" data-description="Enters 7" data-operation="writeNumber" data-key-code="Numpad7">7</button>
+                <button id="eight" class="bt numbers" type="button" data-description="Enters 8" data-operation="writeNumber" data-key-code="Numpad8">8</button>
+                <button id="nine" class="bt numbers" type="button" data-description="Enters 9" data-operation="writeNumber" data-key-code="Numpad9">9</button>
+                <button id="divide" class="bt operations" type="button" data-description="Enters divide operation." data-key-code="NumpadDivide" data-operation="prepCalculation" data-calc-function="divide">&#247;</button>
 
-        <button id="four" class="bt numbers" type="button" data-description="Enters 4" data-operation="writeNumber"
-          data-key-code="Numpad4">4</button>
-        <button id="five" class="bt numbers" type="button" data-description="Enters 5" data-operation="writeNumber"
-          data-key-code="Numpad5">5</button>
-        <button id="six" class="bt numbers" type="button" data-description="Enters 6" data-operation="writeNumber"
-          data-key-code="Numpad6">6</button>
-        <button id="multiply" class="bt operations" type="button" data-description="Enters multiiplication operation."
-          data-key-code="NumpadMultiply" data-operation="prepCalculation"
-          data-calc-function="multiply">&#215;</button>
+                <button id="four" class="bt numbers" type="button" data-description="Enters 4" data-operation="writeNumber" data-key-code="Numpad4">4</button>
+                <button id="five" class="bt numbers" type="button" data-description="Enters 5" data-operation="writeNumber" data-key-code="Numpad5">5</button>
+                <button id="six" class="bt numbers" type="button" data-description="Enters 6" data-operation="writeNumber" data-key-code="Numpad6">6</button>
+                <button id="multiply" class="bt operations" type="button" data-description="Enters multiiplication operation." data-key-code="NumpadMultiply" data-operation="prepCalculation" data-calc-function="multiply">&#215;</button>
 
-        <button id="one" class="bt numbers" type="button" data-description="Enters 1" data-operation="writeNumber"
-          data-key-code="Numpad1">1</button>
-        <button id="two" class="bt numbers" type="button" data-description="Enters 2" data-operation="writeNumber"
-          data-key-code="Numpad2">2</button>
-        <button id="three" class="bt numbers" type="button" data-description="Enters 3" data-operation="writeNumber"
-          data-key-code="Numpad3">3</button>
-        <button id="subtract" class="bt operations" type="button" data-description="Enters substract operation."
-          data-key-code="NumpadSubtract" data-operation="prepCalculation"
-          data-calc-function="substract">&#8722;</button>
+                <button id="one" class="bt numbers" type="button" data-description="Enters 1" data-operation="writeNumber" data-key-code="Numpad1">1</button>
+                <button id="two" class="bt numbers" type="button" data-description="Enters 2" data-operation="writeNumber" data-key-code="Numpad2">2</button>
+                <button id="three" class="bt numbers" type="button" data-description="Enters 3" data-operation="writeNumber" data-key-code="Numpad3">3</button>
+                <button id="subtract" class="bt operations" type="button" data-description="Enters substract operation." data-key-code="NumpadSubtract" data-operation="prepCalculation" data-calc-function="substract">&#8722;</button>
 
-        <button id="zero" class="bt numbers" type="button" data-description="Enters 0" data-operation="writeNumber"
-          data-key-code="Numpad0">0</button>
-        <button id="decimal" class="bt numbers" type="button" data-description="Enters decimal point."
-          data-operation="writeDecimalPoint" data-key-code="NumpadDecimal">.</button>
-        <button id="equals" class="bt operations" data-operation="calcAndShowResult" type="button"
-          data-description="Performs operation and displays result." data-key-code="Space">&#61;</button>
-        <button id="add" class="bt operations" type="button" data-description="Enters addition operation."
-          data-key-code="NumpadAdd" data-operation="prepCalculation" data-calc-function="add">&#43;</button>
-      </div>
+                <button id="zero" class="bt numbers" type="button" data-description="Enters 0" data-operation="writeNumber" data-key-code="Numpad0">0</button>
+                <button id="decimal" class="bt numbers" type="button" data-description="Enters decimal point." data-operation="writeDecimalPoint" data-key-code="NumpadDecimal">.</button>
+                <button id="equals" class="bt operations" data-operation="calcAndShowResult" type="button" data-description="Performs operation and displays result." data-key-code="Space">&#61;</button>
+                <button id="add" class="bt operations" type="button" data-description="Enters addition operation." data-key-code="NumpadAdd" data-operation="prepCalculation" data-calc-function="add">&#43;</button>
+            </div>
+        </div>
     </div>
-  </div>
-  <script src="src/main.js"></script>
+    <script src="src/main.js"></script>
 </body>
 
 </html>
