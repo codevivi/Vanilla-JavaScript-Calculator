@@ -12,44 +12,50 @@ html {
 }
 
 body {
-    height: 100%;
-    width: 100%;
-    background-color: #fef7bd;
-    background-color: #d0d0d0;
-    background: rgb(208, 208, 208);
-    background: linear-gradient(102deg, rgba(208, 208, 208, 1) 0%, rgba(66, 62, 61, 1) 100%);
     background: rgb(208, 208, 208);
     background: linear-gradient(126deg, rgba(208, 208, 208, 1) 0%, rgba(66, 62, 61, 1) 100%);
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d0d0d0+0,423e3d+100 */
+    background: #d0d0d0;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #d0d0d0 0%, #423e3d 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #d0d0d0 0%, #423e3d 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #d0d0d0 0%, #423e3d 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d0d0d0', endColorstr='#423e3d', GradientType=1);
+    /* IE6-9 */
+    height: 100%;
+    width: 100%;
 }
 
 .nav-link {
-    padding: 1em;
+    color: #56697f;
     display: block;
     margin-bottom: 1em;
-    color: #56697f;
+    padding: 1em;
 }
 
 .calculator {
-    background-color: #bfd8a2;
-    background-color: #656262;
-    background-color: #393635;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4b4949+0,423e3d+100 */
+    background: #4b4949;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #4b4949 0%, #423e3d 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #4b4949 0%, #423e3d 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #4b4949 0%, #423e3d 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#4b4949', endColorstr='#423e3d', GradientType=1);
+    /* IE6-9 */
     border-bottom: 20px solid #423e3d;
     border-left: 15px solid #5a5757;
     border-radius: 20px 5px 20px 5px;
     border-right: 5px solid #433f3f;
-    /*  -webkit-box-shadow: 5px 0px 20px grey;
-    box-shadow: 5px 0px 20px grey;
-   */
-    background: rgb(97, 94, 94);
-    background: linear-gradient(48deg, rgba(97, 94, 94, 1) 0%, rgba(57, 54, 53, 1) 100%);
-    background: rgb(75, 73, 73);
-    background: linear-gradient(61deg, rgba(75, 73, 73, 1) 0%, rgba(66, 62, 61, 1) 100%);
-    background: rgb(75, 73, 73);
-    background: linear-gradient(102deg, rgba(75, 73, 73, 1) 0%, rgba(66, 62, 61, 1) 100%);
     font-family: "Roboto Condensed", sans-serif;
     height: auto;
-    margin: auto;
     margin-top: 10px;
+    margin: auto;
     max-height: 640px;
     max-width: 350px;
     min-height: 400px;
@@ -81,7 +87,6 @@ body {
 }
 
 .text-1 {
-    color: rgb(48, 36, 23);
     color: #f6ee8d;
     display: block;
     float: right;
@@ -91,7 +96,7 @@ body {
 
 .mini-display {
     background-color: #c0c9b8;
-    border-bottom: 5px solid #8a8787;
+    border-bottom: 5px solid #787575;
     border-left: 5px solid #656262;
     border-radius: 3%;
     border-right: 5px solid #817e7e;
@@ -106,9 +111,8 @@ body {
 }
 
 .display-box {
-    background-color: #9cb285;
     background-color: #c0c9b8;
-    border-bottom: 12px solid#8a8787;
+    border-bottom: 12px solid#787575;
     border-left: 13px solid #656262;
     border-radius: 3%;
     border-right: 12px solid #817e7e;
@@ -133,6 +137,9 @@ body {
     width: 100%;
 }
 
+
+/*/////////////////////////////////////*/
+
 .info {
     background-color: #dfac39;
     color: rgb(48, 36, 23);
@@ -146,25 +153,25 @@ body {
 
 .text-2 {
     clear: both;
+    color: #f6ee8d;
     float: right;
     font-size: 12px;
     font-style: italic;
     margin: 5px;
-    color: #f6ee8d;
 }
 
 .buttons-container {
-    -webkit-box-align: center;
     -ms-flex-align: center;
+    -ms-flex-pack: distribute;
+    -ms-flex-wrap: wrap;
+    -webkit-box-align: center;
     align-items: center;
     clear: both;
     display: -ms-flexbox;
     display: -webkit-box;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     height: auto;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
     margin: auto;
     max-width: 275px;
@@ -186,6 +193,12 @@ body {
 }
 
 .bt {
+    -o-transition: background-color 0.5s;
+    -o-transition: border-width 0.5s;
+    -o-transition: box-shadow 0.5s;
+    -webkit-transition: -webkit-box-shadow 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -webkit-transition: border-width 0.5s;
     border-radius: 5px 1px 8px 1px;
     border-top: 0;
     color: #fefcc2;
@@ -197,17 +210,11 @@ body {
     margin-top: 5px;
     padding: 10px 5px 5px 5px;
     text-indent: 5px;
-    -webkit-transition: background-color 0.5s;
-    -o-transition: background-color 0.5s;
-    transition: background-color 0.5s;
-    -webkit-transition: border-width 0.5s;
-    -o-transition: border-width 0.5s;
-    transition: border-width 0.5s;
-    -webkit-transition: -webkit-box-shadow 0.5s;
     transition: -webkit-box-shadow 0.5s;
-    -o-transition: box-shadow 0.5s;
-    transition: box-shadow 0.5s;
+    transition: background-color 0.5s;
+    transition: border-width 0.5s;
     transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+    transition: box-shadow 0.5s;
     width: 52px;
 }
 
@@ -261,40 +268,37 @@ body {
 }
 
 .bt:active::after {
-    width: inherit;
-    height: inherit;
-    width: 50px;
-    height: 37px;
     border-radius: 3px;
     border: 1px solid black;
     bottom: 29px;
+    height: inherit;
+    height: 37px;
     right: 6px;
+    width: 50px;
+    width: inherit;
 }
 
 .bt-active {
-    width: inherit;
-    height: inherit;
     border-radius: 0;
     border: 0;
-    margin-top: 10px;
     height: 36px;
+    left: 0;
     margin-right: 8px;
-    width: 52px;
+    margin-top: 10px;
+    margin: 0;
     position: relative;
     top: 3px;
-    left: -2px;
+    width: 52px;
 }
 
 .bt-active::after {
-    position: relative;
-    width: inherit;
-    height: inherit;
-    width: 52px;
-    height: 37px;
     border-radius: 3px;
     border: 1px solid black;
     bottom: 29px;
+    height: 37px;
+    position: relative;
     right: 7px;
+    width: 52px;
 }
 
 #mc,
@@ -303,20 +307,6 @@ body {
 #back {
     color: red;
 }
-
-
-/*
-#back {
-    font-size: 25px;
-    line-height: 10px;
-}
-#back::after {
-    bottom: 20px;
-}
-#back:active::after {
-    bottom: 22px;
-}
-*/
 
 .info-E {
     bottom: 0;
@@ -334,8 +324,8 @@ body {
 
 @media all and (min-width: 320px) {
     .mini-display {
-        height: 45px;
         font-size: 13px;
+        height: 45px;
     }
 }
 
@@ -349,13 +339,6 @@ body {
 }
 
 @media all and (min-width: 430px) {
-    /*  .bt:active {
-        height: 35px;
-        margin-right: 8px;
-        margin-top: 10px;
-        width: 49px;
-    }
-    */
     .calculator {
         margin-top: 20px;
     }
