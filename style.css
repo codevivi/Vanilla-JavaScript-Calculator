@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 * {
     -webkit-box-sizing: border-box;
@@ -13,14 +20,15 @@ html {
 
 body {
     background: rgb(208, 208, 208);
+    background: -o-linear-gradient(324deg, rgba(208, 208, 208, 1) 0%, rgba(66, 62, 61, 1) 100%);
     background: linear-gradient(126deg, rgba(208, 208, 208, 1) 0%, rgba(66, 62, 61, 1) 100%);
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d0d0d0+0,423e3d+100 */
     background: #d0d0d0;
     /* Old browsers */
-    background: -moz-linear-gradient(left, #d0d0d0 0%, #423e3d 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #d0d0d0 0%, #423e3d 100%);
     /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(linear, left top, right top, from(#d0d0d0), to(#423e3d));
+    background: -o-linear-gradient(left, #d0d0d0 0%, #423e3d 100%);
     background: linear-gradient(to right, #d0d0d0 0%, #423e3d 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#d0d0d0', endColorstr='#423e3d', GradientType=1);
@@ -40,10 +48,10 @@ body {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#4b4949+0,423e3d+100 */
     background: #4b4949;
     /* Old browsers */
-    background: -moz-linear-gradient(left, #4b4949 0%, #423e3d 100%);
     /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, #4b4949 0%, #423e3d 100%);
     /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(linear, left top, right top, from(#4b4949), to(#423e3d));
+    background: -o-linear-gradient(left, #4b4949 0%, #423e3d 100%);
     background: linear-gradient(to right, #4b4949 0%, #423e3d 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#4b4949', endColorstr='#423e3d', GradientType=1);
