@@ -25,9 +25,9 @@ describe("Math functions with 2 positive integers", function() {
         // assert
         expect(result).toBe(585);
     });
-    it("substract two positive numbers", function() {
+    it("subtract two positive numbers", function() {
         // act
-        const result = substract(num1, num2);
+        const result = subtract(num1, num2);
 
         // assert
         expect(result).toBe(192);
@@ -49,6 +49,8 @@ describe("Check [+] add function with different values", function() {
         [1000.021, 0.02, 1000.041, ''],
         [0.1, 0.2, 0.3, ''],
         [0.7, 0.1, 0.8, ''],
+        [203.95555, 0.00009, 203.95564, ''],
+        [203.95555, 0.000009, 203.95556, ''],
         [0.01, 0.02, 0.03, ''],
         [0.008, 0.002, 0.01, ''],
         [0.0008, 0.0002, 0.001, ''],
@@ -73,7 +75,7 @@ describe("Check [+] add function with different values", function() {
         });
     }
 });
-describe("Check [-] substract function with different values", function() {
+describe("Check [-] subtract function with different values", function() {
     let varsToCheck;
     varsToCheck = [
         //[num1, num2, result, error]
@@ -88,14 +90,14 @@ describe("Check [-] substract function with different values", function() {
     ];
 
     for (let i = 0; i < varsToCheck.length; i++) {
-        it(`Should substract properly: (${varsToCheck[i][0]}) - (${varsToCheck[i][1]}) = ${varsToCheck[i][2]}`, function() {
+        it(`Should subtract properly: (${varsToCheck[i][0]}) - (${varsToCheck[i][1]}) = ${varsToCheck[i][2]}`, function() {
             //arrange
             let result;
 
             if (error || memoryError) {
                 clear();
             }
-            result = substract(varsToCheck[i][0], varsToCheck[i][1]);
+            result = subtract(varsToCheck[i][0], varsToCheck[i][1]);
             expect(result).toBe(varsToCheck[i][2]);
             expect(error).toBe(varsToCheck[i][3]);
         });
@@ -119,7 +121,7 @@ describe("Check [*] multiply function with different values", function() {
         [9.99, 5, 49.95, ''],
         [0.1, 0.2, 0.02, ''],
         [0.3, 0.0003, 0.00009, ''],
-        [95, 722228.63, 68611719, ''],
+        [95, 722228.63, 68611720, ''],
         [0.6, 3, 1.8, ''],
         [2, -7, -14, ''],
         [-10, -6, 60, ''],
@@ -147,9 +149,9 @@ describe("Check [/] divide function with different values", function() {
     varsToCheck = [
         //[num1, num2, result, error]
         [9, 3, 3, ''],
-        [2, 3, 0.6666666, ''],
+        [2, 3, 0.6666667, ''],
         [0.6666666, 2, 0.3333333, ''],
-        [1, 32.09, 0.0311623, ''],
+        [1, 32.09, 0.0311624, ''],
         [223.2, 2232.00, 0.1, ''],
         [10, 100, 0.1, ''],
         [2232.00, 0.1, 22320, ''],
