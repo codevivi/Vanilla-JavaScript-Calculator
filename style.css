@@ -43,7 +43,7 @@ body {
     background: -o-linear-gradient(left, #4b4949 0%, #423e3d 100%);
     background: linear-gradient(to right, #4b4949 0%, #423e3d 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#4b4949', endColorstr='#423e3d', GradientType=1);
+    /* filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#4b4949', endColorstr='#423e3d', GradientType=1); */
     /* IE6-9 */
     border-bottom: 20px solid #423e3d;
     border-left: 15px solid #5a5757;
