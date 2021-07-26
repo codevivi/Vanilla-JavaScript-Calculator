@@ -70,10 +70,10 @@ body {
 
 
 .name {
-    background-image: url("https://github.com/codevivi/Vanilla-JavaScript-Calculator/blob/main/vanilla.png?-raw=true");
+    /* background-image: url("https://github.com/codevivi/Vanilla-JavaScript-Calculator/blob/main/vanilla.png?-raw=true");
     background-position: 10px 10px;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: contain; */
     color: #f6ee8d;
     float: left;
     font-size: 25px;
