@@ -1,13 +1,14 @@
-# Vanilla JavaScript Calculator
-JS practice project.<br>
-<br>
-HTML, CSS, JS <br>
+# 🪧 Vanilla JavaScript Calculator
 
-Tried to imitate handheld calculator.
-<br>
+## 📋 About
+
+JS practice project
+
+Handheld calculator imitation.
+
 Added some Jasmine tests to make sure calculations correct.
-<br>
-[Check it live](https://calculator.codevivi.com/)
-<br>
+
+🌐 **Site published at**: [https://codevivi.github.io/Vanilla-JavaScript-Calculator/](https://codevivi.github.io/Vanilla-JavaScript-Calculator/)
+
 ![alt calculator screenshot](./calculator_600_800.png)
 ![alt tests screenshot](./calc_tests_600_800.png)
